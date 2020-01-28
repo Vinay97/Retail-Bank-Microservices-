@@ -1,0 +1,62 @@
+
+<div ng-include="'Links.html'"></div>
+
+<div class="row">
+<div class="col s6 offset-s4">
+<h4>Customer Creation</h4>
+<form ng-submit="createCustomer()" name = "myForm">
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="icon_prefix" type="number" class="validate" ng-model="customer.customerssnid" name = "ssnid" ng-minlength="9" ng-maxlength="9" required>
+          <label for="icon_prefix">Customer SSN ID</label>
+          <span style="color:red" ng-show="myForm.ssnid.$touched&&myForm.ssnid.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.ssnid.$touched&&myForm.ssnid.$error.minlength">Enter valid length</span>
+          <span style="color:red" ng-show="myForm.ssnid.$touched&&myForm.ssnid.$error.maxlength">Enter valid length</span>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">person_pin</i>
+          <input id="icon_prefix" type="text" class="validate" ng-model = "customer.customername" ng-pattern="/^[a-zA-Z0-9]*$/" name = "name" required>
+          <label for="icon_prefix">Customer Name</label>
+          <span style="color:red" ng-show="myForm.name.$touched&&myForm.name.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.name.$touched&&myForm.name.$error.pattern">Enter only alphabets</span>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">dialer_sip</i>
+          <input id="icon_prefix" type="number" class="validate" ng-model = "customer.contactno" ng-minlength="10" ng-maxlength="10" name = "cno" required>
+          <label for="icon_prefix">Contact No</label>
+          <span style="color:red" ng-show="myForm.cno.$touched&&myForm.cno.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.cno.$touched&&myForm.cno.$error.minlength">Enter valid length</span>
+          <span style="color:red" ng-show="myForm.cno.$touched&&myForm.cno.$error.maxlength">Enter valid length</span>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">room</i>
+          <input id="icon_prefix" type="text" class="validate" ng-model="customer.city" name = "city" ng-pattern="/^[a-zA-Z0-9]*$/" required>
+          <label for="icon_prefix">City</label>
+          <span style="color:red" ng-show="myForm.city.$touched&&myForm.city.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.city.$touched&&myForm.city.$error.pattern">Enter only alphabets</span>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_prefix" type="email" class="validate" ng-model="customer.email" name="email" required>
+          <label for="icon_prefix">Email</label>
+          <span style="color:red" ng-show="myForm.email.$touched&&myForm.email.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.email.$touched&&myForm.email.$invalid">Enter valid email</span>
+        </div>
+</div>
+<div class="row">
+ <button class="btn waves-effect waves-light" type="submit" ng-disabled = "myForm.$invalid" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</form>
+</div>
+</div>

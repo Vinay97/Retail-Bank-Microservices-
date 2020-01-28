@@ -1,0 +1,11 @@
+<div ng-include="'Links.html'"></div>
+<center>
+
+<div ng-show="transId==0">
+<h4>Account Does not exist</h4>
+</div>
+<div ng-show="transId>0">
+<h4>Transaction Done Successfully</h4>
+<h5>Generated Transaction Id is {{transId}}</h5>
+</div>
+</center>

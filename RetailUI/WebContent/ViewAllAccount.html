@@ -1,0 +1,22 @@
+<div ng-include="'Links.html'"></div>
+<center>
+<table class="centered striped">
+        <thead>
+          <tr>
+              <th data-field="id">Account ID</th>
+              <th data-field="name">Customer ID</th>
+              <th data-field="price">Account Type</th>
+              <th data-field="price">Balance</th>
+              
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "x in account">
+        <td>{{x.accountId}}</td>
+        <td>{{x.customerId}}</td>
+        <td>{{x.accountType}}</td>
+        <td>{{x.balance}}</td>
+        </tr>
+        </tbody>
+        </table>
+</center>

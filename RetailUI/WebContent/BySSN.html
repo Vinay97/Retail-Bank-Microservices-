@@ -1,0 +1,46 @@
+<div ng-include="'Links.html'"></div>
+
+<div class="row">
+<div class="col s6 offset-s4">
+<h4>Customer ID</h4>
+<form ng-submit = "getBySSN()">
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="icon_prefix" type="number" class="validate" ng-model = "cid">
+          <label for="icon_prefix">Customer ID</label>
+        </div>
+</div>
+<div class="row">
+ <button class="btn waves-effect waves-light" type="submit" name="action">View
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</form>
+</div>
+<div ng-if="st">
+<table class="centered striped">
+        <thead>
+          <tr>
+              <th data-field="id">CustomerSSNID</th>
+              <th data-field="name">CustomerID</th>
+              <th data-field="price">Customer Name</th>
+              <th data-field="price">Contact No</th>
+              <th data-field="price">City</th>
+              <th data-field="price">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>{{customers.customerssnid}}</td>
+        <td>{{customers.customerid}}</td>
+        <td>{{customers.customername}}</td>
+        <td>{{customers.contactno}}</td>
+        <td>{{customers.city}}</td>
+        <td>{{customers.email}}</td>
+        </tr>
+        </tbody>
+        </table>
+</div>
+<div ng-if="!st"><p>Customer Not Exist</div>
+</div>

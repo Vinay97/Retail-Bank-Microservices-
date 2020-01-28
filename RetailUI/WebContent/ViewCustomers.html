@@ -1,0 +1,27 @@
+<div ng-include="'Links.html'"></div>
+<center>
+<table class="centered striped">
+        <thead>
+          <tr>
+              <th data-field="id">CustomerSSNID</th>
+              <th data-field="name">CustomerID</th>
+              <th data-field="price">Customer Name</th>
+              <th data-field="price">Contact No</th>
+              <th data-field="price">City</th>
+              <th data-field="price">Email</th>
+			  <th data-field="price">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "x in customers">
+        <td>{{x.customerssnid}}</td>
+        <td>{{x.customerid}}</td>
+        <td>{{x.customername}}</td>
+        <td>{{x.contactno}}</td>
+        <td>{{x.city}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.status}}</td>
+        </tr>
+        </tbody>
+        </table>
+</center>

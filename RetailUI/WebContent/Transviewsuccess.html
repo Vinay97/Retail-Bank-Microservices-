@@ -1,0 +1,29 @@
+<div ng-include="'Links.html'"></div>
+<div ng-show="transactions">
+
+<table class="centered striped">
+        <thead>
+          <tr>
+              <th data-field="id">Transaction ID</th>
+              <th data-field="name">Account ID</th>
+              <th data-field="price">Customer ID</th>
+              <th data-field="price">Before Balance</th>
+              <th data-field="price">After Balance</th>
+              <th data-field="price">Date</th>
+              <th data-field="price">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "x in transactions">
+        <td>{{x.transId}}</td>
+        <td>{{x.accountId}}</td>
+        <td>{{x.customerId}}</td>
+        <td>{{x.pbalance}}</td>
+        <td>{{x.abalance}}</td>
+        <td>{{x.date}}</td>
+        <td>{{x.type}}</td>
+        </tr>
+        </tbody>
+        </table>
+</center>
+</div>

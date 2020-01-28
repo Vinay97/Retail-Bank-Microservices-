@@ -1,0 +1,31 @@
+ <div class="col s6">
+                <div class="card-panel">
+                  <div class="row">
+                    <form class="col s12" name="myForm">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="mdi-action-account-circle prefix"></i>
+                          <input id="name4" type="text" name="name" ng-model="login.username" class="validate" required>
+                          <label for="first_name">Name</label>
+                          <span ng-show="myForm.name.$touched&&myForm.name.$error.required" style="color:red">This Field is required</span>
+                        </div>
+                      </div>
+                       <div class="row">
+                        <div class="input-field col s12">
+                          <i class="mdi-action-lock-outline prefix"></i>
+                          <input id="password5" type="password" name="pass" ng-model = "login.password" class="validate" required>
+                          <label for="password">Password</label>
+                          <span ng-show="myForm.pass.$touched&&myForm.pass.$error.required" style="color:red">This Field is required</span>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <button class="btn cyan waves-effect waves-light right" type="submit" name="action" ng-click="take()">Submit
+                              <i class="mdi-content-send right"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>

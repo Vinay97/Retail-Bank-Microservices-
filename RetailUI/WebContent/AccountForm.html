@@ -1,0 +1,46 @@
+<div ng-include="'Links.html'"></div>
+
+<div class="row">
+<div class="col s6 offset-s4">
+<h4>Account Creation</h4>
+<form name = "myForm">
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="icon_prefix" type="number"  ng-model = "account.customerId" class="validate" name = "cid" ng-minlength="9" ng-maxlength="9" required>
+          <label for="icon_prefix">Customer ID</label>
+          <span style="color:red" ng-show="myForm.cid.$touched&&myForm.cid.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.cid.$touched&&myForm.cid.$error.minlength">Enter valid length</span>
+          <span style="color:red" ng-show="myForm.cid.$touched&&myForm.cid.$error.maxlength">Enter valid length</span>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+		
+         <select class="browser-default" ng-model = "account.accountType" required>
+         <option>---Select account Type---</option>
+         <option value="Savings">Savings</option>
+         <option value = "Current">Current</option>
+         </select>{{account.accountType}}
+        
+          
+          <!--  <label for="icon_prefix">Account Type</label>-->
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">account_balance</i>
+          <input id="icon_prefix" type="number" class="validate" ng-model = "account.balance" name = "bal" min="0" max = "1000000" required>
+          <label for="icon_prefix">Balance</label>
+          <span style="color:red" ng-show="myForm.bal.$invalid">Enter valid value</span>
+        </div>
+</div>
+
+<div class="row">
+ <button class="btn waves-effect waves-light" type="submit" name="action" ng-disabled="myForm.$invalid"  ng-click="createAccount()">Create Account
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</form>
+</div>
+</div>

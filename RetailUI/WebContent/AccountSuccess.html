@@ -1,0 +1,15 @@
+<div ng-include="'Links.html'"></div>
+<center>
+<div ng-show="acct==-1">
+<h4>Customer Can create only One Account of specific type</h4>
+</div>
+
+<div ng-show="acct==0">
+<h4>Customer Does not exist</h4>
+</div>
+
+<div ng-if="acct>0">
+<h4>Account Created Successfully</h4>
+<h5>Generated Account Id is {{acct}}</h5>
+</div>
+</center>

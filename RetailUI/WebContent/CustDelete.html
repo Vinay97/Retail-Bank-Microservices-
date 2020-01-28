@@ -1,0 +1,56 @@
+<div ng-include="'Links.html'"></div>
+<h4>Customer ID customer id={{customer.customerid}}
+</h4>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="icon_prefix" type="number" ng-model="customer.customerid" ng-change="checkit()" class="validate">
+          <label for="icon_prefix">Customer ID</label>customer id={{customer.customerid}}
+        </div>
+<div>{{msg}}</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="icon_prefix" type="number" class="validate" ng-disabled="true" ng-show="existsornot" ng-model="customer.customerssnid">
+          <br>
+          <label for="icon_prefix">Customer SSN ID</label>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">person_pin</i>
+          <input id="icon_prefix" type="text" class="validate" ng-disabled="true" ng-show="existsornot"  ng-model = "customer.customername">
+          <br>
+          <label for="icon_prefix">Customer Name</label>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">dialer_sip</i>
+          <input id="icon_prefix" type="number" class="validate" ng-disabled="true" ng-show="existsornot"  ng-model = "customer.contactno">
+          <br>
+          <label for="icon_prefix">Contact No</label>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">room</i>
+          <input id="icon_prefix" type="text" class="validate" ng-disabled="true" ng-show="existsornot"  ng-model="customer.city">
+          <br>
+          <label for="icon_prefix">City</label>
+        </div>
+</div>
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_prefix" type="email" class="validate" ng-disabled="true" ng-show="existsornot"  ng-model="customer.email">
+          <br>
+          <label for="icon_prefix">Email</label>
+        </div>
+<div class="row">
+ <button class="btn waves-effect waves-light" type="submit" ng-click="deleteit()" name="action">Update
+    <i class="material-icons right">system_update_alt
+</i>
+  </button>
+</div>
+</div></div>

@@ -1,0 +1,48 @@
+<div ng-include="'Links.html'"></div>
+
+<div class="row">
+<div class="col s6 offset-s4">
+<h4>Customer City</h4>
+<form ng-submit = "getByCity()" name = "myForm">
+<div class="row">
+		<div class="input-field col s6">
+          <i class="material-icons prefix">room</i>
+          <input id="icon_prefix" type="text" class="validate" ng-model = "city" name = "city" ng-pattern = "/^[a-zA-Z0-9]*$/" required>
+          <label for="icon_prefix">City Name</label>
+          <span style="color:red" ng-show="myForm.city.$touched&&myForm.city.$error.required">This field is required</span>
+          <span style="color:red" ng-show="myForm.city.$touched&&myForm.city.$error.Pattern">Enter valid values</span>
+        </div>
+</div>
+<div class="row">
+ <button class="btn waves-effect waves-light" type="submit" ng-disabled = "myForm.$invalid" name="action">View
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</form>
+</div>
+<div ng-if="st">
+<table class="centered striped">
+        <thead>
+          <tr>
+              <th data-field="id">CustomerSSNID</th>
+              <th data-field="name">CustomerID</th>
+              <th data-field="price">Customer Name</th>
+              <th data-field="price">Contact No</th>
+              <th data-field="price">City</th>
+              <th data-field="price">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "x in customers">
+        <td>{{x.customerssnid}}</td>
+        <td>{{x.customerid}}</td>
+        <td>{{x.customername}}</td>
+        <td>{{x.contactno}}</td>
+        <td>{{x.city}}</td>
+        <td>{{x.email}}</td>
+        </tr>
+        </tbody>
+        </table>
+</div>
+<div ng-if="!st"><p>Customer Not Exist</div>
+</div>
